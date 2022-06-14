@@ -1,1 +1,0 @@
-zaita trola
