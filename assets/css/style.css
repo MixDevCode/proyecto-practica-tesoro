@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url('../font/BebasNeue-Regular.woff') format('woff'), url('../font/BebasNeue-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: "BebasNeue";
+}
+
+.logo {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    width: 60%;
+}
+
+.margen {
+    margin: 0 30px 0 30px;
+}
+
+
+/* Barra debajo del logo y arriba del píe de página */
+
+.barra {
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 12px;
+    background: black;
+    margin-bottom: 50px;
+}
+
+.nombrejuego {
+    font-size: 80pt;
+    color: coral;
+}
+
+.stand {
+    font-size: 140pt;
+    color: darkcyan;
+}
+
+.pregunta {
+    font-size: 60pt;
+}
+
+button {
+    font-size: 50pt !important;
+}
+
+#content-wrap {
+    padding-bottom: 150px;
+    /* Footer height */
+}
+
+#footer {
+    position: absolute;
+    width: 100%;
+}
