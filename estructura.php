@@ -1,20 +1,30 @@
 <?php
+
+$stands = array(
+    "SF1" => "Software",
+    "INF07" => "Infraestructura",
+    "BIO72" => "Biología"
+);
+
 $preguntas = array(
-    "Software" => array(
+    "SF1" => array(
         "Formato de imagen", "Formato de página web", "¿Qué significa la sigla S.O.?", "¿Que es internet?", "¿Que es un sotware libre?"
         ),
-    "Infraestructura" => array(
+    "INF07" => array(
         "Pregunta1", "Pregunta2", "Pregunta3", "Pregnta4", "Pregunta5"
     ),
-    "Biologia" => array(
+    "BIO72" => array(
         "Pregunta1", "Pregunta2", "Pregunta3", "Pregnta4", "Pregunta5"
     )
 );
 
 $respuestas = array(
-    "Software" => array(
+    "SF1" => array(
         "Formato de imagen" => array(
+            "correcta" => "jpg",
+            "posibles" => array(
             "http", "php", "jgp", "peg", "jpg"
+            ),
         ),
         "Formato de página web" => array(
             "jpg", "MIDI", "http", "python", "html"
@@ -64,3 +74,4 @@ $respuestas = array(
         ),
     )
 );
+?>
