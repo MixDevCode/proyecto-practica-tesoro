@@ -2,30 +2,38 @@
 $stands = array(
     "SF1" => "Software",
     "INF07" => "Infraestructura",
-    "BIO72" => "Biología"
+    "TRSM072" => "Turismo",
+    "TXL0509" => "Textil"
 );
 
 $preguntas = array(
     "SF1" => array(
         "Formato de imagen",
         "Formato de página web",
-        "¿Qué significa la sigla S.O.?",
-        "¿Que es internet?",
-        "¿Que es YouTube?"
+        "Qué significa la sigla S.O.",
+        "¿Qué es internet?",
+        "¿Qué es YouTube?"
     ) ,
     "INF07" => array(
-        "Pregunta1",
-        "Pregunta2",
-        "Pregunta3",
-        "Pregnta4",
-        "Pregunta5"
+        "¿Qué es el Hardware?",
+        "¿Qué es lo más esencial de una computadora?",
+        "¿Qué es un CPU?",
+        "¿Qué es un monitor?",
+        "¿Quién arregla una computadora?"
     ) ,
-    "BIO72" => array(
-        "Pregunta1",
-        "Pregunta2",
-        "Pregunta3",
-        "Pregnta4",
-        "Pregunta5"
+    "TRSM072" => array(
+        "¿Cuántas comparsas hay en Monte Caseros?",
+        "¿Cuál de estas fiestas correntinas existen en Monte Caseros?",
+        "¿Cuál de los siguientes eventos/acciones tiene relación con el turismo?",
+        "Mínimamente qué lenguajes debe manejar un trabajador en turismo en Monte Caseros",
+        "¿Qué importancia tienen los carnavales para el turismo en Monte Caseros?"
+    ),
+    "TXL0509" => array(
+        "¿Cuántas fábricas textiles tiene Monte Caseros?",
+        "¿Cuál de estos productor fabrica la Textil en Monte Caseros?",
+        "¿Qué fibras se usan en la industria textil?",
+        "¿De qué ser vivo se extrae el algodón?",
+        "¿De qué ser vivo de extrae la lana?"
     )
 );
 
@@ -39,8 +47,8 @@ $respuestas = array(
                 "jgp",
                 "peg",
                 "jpg"
-            ) ,
-        ) ,
+            )
+        ),
         "Formato de página web" => array(
             "correcta" => "html",
             "posibles" => array(
@@ -50,7 +58,7 @@ $respuestas = array(
                 "python",
                 "html"
             )
-        ) ,
+        ),
         "¿Qué significa la sigla S.O.?" => array(
             "correcta" => "Sistema Operativo",
             "posibles" => array(
@@ -59,9 +67,9 @@ $respuestas = array(
                 "Standard Operation",
                 "Sostén de Objeto",
                 "Sintaxis.org"
-            ) ,
-        ) ,
-        "¿Que es internet?" => array(
+            )
+        ),
+        "¿Qué es internet?" => array(
             "correcta" => "Una red mundial",
             "posibles" => array(
                 "Una red mundial",
@@ -69,8 +77,8 @@ $respuestas = array(
                 "WiFi",
                 "Una red hogar",
                 "Es un programa"
-            ) ,
-        ) ,
+            )
+        ),
         "¿Qué es YouTube?" => array(
             "correcta" => "Una página web de videos",
             "posibles" => array(
@@ -79,9 +87,9 @@ $respuestas = array(
                 "Un videojuego",
                 "Una canción",
                 "Una foto"
-            ) ,
-        ) ,
-    ) ,
+            )
+        )
+    ),
     "INF07" => array(
         "¿Qué es el Hardware?" => array(
             "correcta" => "Todo lo que se toca de una computadora",
@@ -92,7 +100,7 @@ $respuestas = array(
                 "La persona que trabaja con la PC",
                 "Un procesador"
             )
-        ) ,
+        ),
         "¿Qué es lo más esencial de una computadora?" => array(
             "correcta" => "RAM",
             "posibles" => array(
@@ -101,66 +109,142 @@ $respuestas = array(
                 "Memoria Caché",
                 "Bios",
                 "RAM"
-            ) ,
-        ) ,
+            )
+        ),
         "¿Qué es un CPU?" => array(
-            "Una computadora",
-            "Gabinete",
-            "Procesador",
-            "Una ONG",
-            "Una herramienta"
-        ) ,
+            "correcto" => "Procesador",
+            "posibles" => array(
+                "Un escritorio",
+                "Una caja",
+                "Procesador",
+                "Una ONG",
+                "Una herramienta"
+            )
+        ),
         "¿Qué es un monitor?" => array(
-            "Una pantalla",
-            "Una televiión",
-            "Una computadora",
-            "Un programa",
-            "Un parlante"
-        ) ,
+            "correcto" => "Una pantalla",
+            "posibles" => array(
+                "Una pantalla",
+                "Una televisión",
+                "Una computadora",
+                "Un programa",
+                "Un parlante"
+            )
+        ),
         "¿Quién arregla una computadora?" => array(
-            "Un electriciista",
-            "Un técnico",
-            "Un YouTuber",
-            "Un programador",
-            "Una maestra"
-        ) ,
-    ) ,
-    "Turismo" => array(
-        "¿Cuántas comparsas hay?" => array(
-            "1",
-            "3",
-            "5",
-            "7",
-            "10"
-        ) ,
-        "Pregunta2" => array(
-            "Respuesta1",
-            "Respuesta2",
-            "Respuesta3",
-            "Respuesta4",
-            "Respuesta5"
-        ) ,
-        "Pregunta3" => array(
-            "Respuesta1",
-            "Respuesta2",
-            "Respuesta3",
-            "Respuesta4",
-            "Respuesta5"
-        ) ,
-        "pregunta4" => array(
-            "Respuesta1",
-            "Respuesta2",
-            "Respuesta3",
-            "Respuesta4",
-            "Respuesta5"
-        ) ,
-        "pregunta5" => array(
-            "Respuesta1",
-            "Respuesta2",
-            "Respuesta3",
-            "Respuesta4",
-            "Respuesta5"
-        ) ,
+            "correcto" => "Un técnico",
+            "posibles" => array(
+                "Un electriciista",
+                "Un técnico",
+                "Un YouTuber",
+                "Un programador",
+                "Una maestra"
+            )
+        ),
+    ),
+    "TRSM072" => array(
+        "¿Cuántas comparsas hay en Monte Caseros?" => array(
+            "correcto" => "7",
+            "posibles" => array(
+                "1",
+                "3",
+                "4",
+                "7",
+                "8"
+            )
+        ),
+        "¿Cuál de estas fiestas correntinas existen en Monte Caseros?" => array(
+            "correcto" => "Ninguna de las anteriores",
+            "posibles" => array(
+                "Fiesta Nacional del Chamamé",
+                "Fiesta NAcional del Surubí",
+                "Fiesta Nacional de la Naranja",
+                "Fiesta del Carnavaal de Frontera",
+                "Ninguna de las anteriores"
+            )
+        ),
+        "¿Cuál de los siguientes eventos/acciones tiene relación con el turismo?" => array(
+            "correcto" => "Fiesta de la Sandía",
+            "posibles" => array(
+                "Campeonato de futbol local",
+                "Fiesta de la Sandía",
+                "Carreraas universitarias",
+                "Pavimentación de calles",
+                "Ninguna de las anteriores"
+            )
+        ),
+        "Mínimamente qué lenguajes debe manejar un trabajador en turismo en Monte Caseros" => array(
+            "correcto" => "Inglés, Portugués, Español",
+            "posibles" => array(
+                "Inglés, Español, Guaraní",
+                "Argentino, Inglés, Alemán",
+                "Inglés, Portugués, Español",
+                "Brasilero, Ingés, Chino",
+                "Uruguayo, Brasilero, Inglés"
+            )
+        ),
+        "¿Qué importancia tienen los carnavales para el turismo en Monte Caseros?" => array(
+            "correcto" => "Mucha",
+            "posibles" => array(
+                "Extrema (es el único turismo que hay)",
+                "Mucha",
+                "Poca",
+                "Casi nada",
+                "Nada"
+            )
+        ),
+    ),
+    "TXL0509" => array(
+        "¿Cuántas fábricas textiles existen en Monte Caseros?" => array(
+            "correcto" => "1",
+            "posibles" => array(
+                "1",
+                "3",
+                "4",
+                "Nunca existió ninguna",
+                "Existía una, pero cerró"
+            )
+        ),
+        "¿Cuál de estos productos comenzó a fabricar la Fábrica Textil en Monte Caseros por el COVID?" => array(
+            "correcto" => "Barbijos",
+            "posibles" => array(
+                "Zapatillas John Foos",
+                "Productos Adidas",
+                "Todo tipo de ropa",
+                "Barbijos",
+                "Ninguna de las anteriores"
+            )
+        ),
+        "¿Qué fibras se usan en la industria textil?" => array(
+            "correcto" => "Fibras naturales, artificiales y sintéticas",
+            "posibles" => array(
+                "Fibras naturales",
+                "Fibras naturales y artificiales",
+                "Fibras naturales, artificiales y sintéticas",
+                "Fibras de hilo, lana y algodón",
+                "Ellos no usan fibras, las producen"
+            )
+        ),
+        "¿De qué ser vivo se extrae el algodón?" => array(
+            "correcto" => "Planta de algodón",
+            "posibles" => array(
+                "Oveja",
+                "Perros Caniche",
+                "Dientes de león",
+                "Planta de algodón",
+                "No se extrae de ningún animal o planta"
+            )
+        ),
+        "¿De qué ser vivo de extrae la lana?" => array(
+            "correcto" => "Oveja",
+            "posibles" => array(
+                "Perros Caniche",
+                "Oveja",
+                "Abeja",
+                "Oso polar",
+                "Planta de algodón"
+            )
+        )
     )
 );
 ?>
