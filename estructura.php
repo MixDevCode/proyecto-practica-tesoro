@@ -10,7 +10,7 @@ $preguntas = array(
     "SF1" => array(
         "Formato de imagen",
         "Formato de página web",
-        "Qué significa la sigla S.O.",
+        "¿Qué significa la sigla S.O.?",
         "¿Qué es internet?",
         "¿Qué es YouTube?"
     ) ,
@@ -25,12 +25,12 @@ $preguntas = array(
         "¿Cuántas comparsas hay en Monte Caseros?",
         "¿Cuál de estas fiestas correntinas existen en Monte Caseros?",
         "¿Cuál de los siguientes eventos/acciones tiene relación con el turismo?",
-        "Mínimamente qué lenguajes debe manejar un trabajador en turismo en Monte Caseros",
+        "Mínimamente, ¿qué lenguajes debe manejar un trabajador en turismo en Monte Caseros?",
         "¿Qué importancia tienen los carnavales para el turismo en Monte Caseros?"
     ),
     "TXL0509" => array(
-        "¿Cuántas fábricas textiles tiene Monte Caseros?",
-        "¿Cuál de estos productor fabrica la Textil en Monte Caseros?",
+        "¿Cuántas fábricas textiles existen en Monte Caseros?",
+        "¿Cuál de estos productos comenzó a fabricar la Fábrica Textil en Monte Caseros por la pandemia?",
         "¿Qué fibras se usan en la industria textil?",
         "¿De qué ser vivo se extrae el algodón?",
         "¿De qué ser vivo de extrae la lana?"
@@ -112,7 +112,7 @@ $respuestas = array(
             )
         ),
         "¿Qué es un CPU?" => array(
-            "correcto" => "Procesador",
+            "correcta" => "Procesador",
             "posibles" => array(
                 "Un escritorio",
                 "Una caja",
@@ -122,7 +122,7 @@ $respuestas = array(
             )
         ),
         "¿Qué es un monitor?" => array(
-            "correcto" => "Una pantalla",
+            "correcta" => "Una pantalla",
             "posibles" => array(
                 "Una pantalla",
                 "Una televisión",
@@ -132,7 +132,7 @@ $respuestas = array(
             )
         ),
         "¿Quién arregla una computadora?" => array(
-            "correcto" => "Un técnico",
+            "correcta" => "Un técnico",
             "posibles" => array(
                 "Un electriciista",
                 "Un técnico",
@@ -144,7 +144,7 @@ $respuestas = array(
     ),
     "TRSM072" => array(
         "¿Cuántas comparsas hay en Monte Caseros?" => array(
-            "correcto" => "7",
+            "correcta" => "7",
             "posibles" => array(
                 "1",
                 "3",
@@ -154,7 +154,7 @@ $respuestas = array(
             )
         ),
         "¿Cuál de estas fiestas correntinas existen en Monte Caseros?" => array(
-            "correcto" => "Ninguna de las anteriores",
+            "correcta" => "Ninguna de las anteriores",
             "posibles" => array(
                 "Fiesta Nacional del Chamamé",
                 "Fiesta NAcional del Surubí",
@@ -164,7 +164,7 @@ $respuestas = array(
             )
         ),
         "¿Cuál de los siguientes eventos/acciones tiene relación con el turismo?" => array(
-            "correcto" => "Fiesta de la Sandía",
+            "correcta" => "Fiesta de la Sandía",
             "posibles" => array(
                 "Campeonato de futbol local",
                 "Fiesta de la Sandía",
@@ -173,8 +173,8 @@ $respuestas = array(
                 "Ninguna de las anteriores"
             )
         ),
-        "Mínimamente qué lenguajes debe manejar un trabajador en turismo en Monte Caseros" => array(
-            "correcto" => "Inglés, Portugués, Español",
+        "Mínimamente, ¿qué lenguajes debe manejar un trabajador en turismo en Monte Caseros?" => array(
+            "correcta" => "Inglés, Portugués, Español",
             "posibles" => array(
                 "Inglés, Español, Guaraní",
                 "Argentino, Inglés, Alemán",
@@ -184,7 +184,7 @@ $respuestas = array(
             )
         ),
         "¿Qué importancia tienen los carnavales para el turismo en Monte Caseros?" => array(
-            "correcto" => "Mucha",
+            "correcta" => "Mucha",
             "posibles" => array(
                 "Extrema (es el único turismo que hay)",
                 "Mucha",
@@ -196,7 +196,7 @@ $respuestas = array(
     ),
     "TXL0509" => array(
         "¿Cuántas fábricas textiles existen en Monte Caseros?" => array(
-            "correcto" => "1",
+            "correcta" => "1",
             "posibles" => array(
                 "1",
                 "3",
@@ -205,8 +205,8 @@ $respuestas = array(
                 "Existía una, pero cerró"
             )
         ),
-        "¿Cuál de estos productos comenzó a fabricar la Fábrica Textil en Monte Caseros por el COVID?" => array(
-            "correcto" => "Barbijos",
+        "¿Cuál de estos productos comenzó a fabricar la Fábrica Textil en Monte Caseros por la pandemia?" => array(
+            "correcta" => "Barbijos",
             "posibles" => array(
                 "Zapatillas John Foos",
                 "Productos Adidas",
@@ -216,7 +216,7 @@ $respuestas = array(
             )
         ),
         "¿Qué fibras se usan en la industria textil?" => array(
-            "correcto" => "Fibras naturales, artificiales y sintéticas",
+            "correcta" => "Fibras naturales, artificiales y sintéticas",
             "posibles" => array(
                 "Fibras naturales",
                 "Fibras naturales y artificiales",
@@ -226,7 +226,7 @@ $respuestas = array(
             )
         ),
         "¿De qué ser vivo se extrae el algodón?" => array(
-            "correcto" => "Planta de algodón",
+            "correcta" => "Planta de algodón",
             "posibles" => array(
                 "Oveja",
                 "Perros Caniche",
@@ -236,7 +236,7 @@ $respuestas = array(
             )
         ),
         "¿De qué ser vivo de extrae la lana?" => array(
-            "correcto" => "Oveja",
+            "correcta" => "Oveja",
             "posibles" => array(
                 "Perros Caniche",
                 "Oveja",

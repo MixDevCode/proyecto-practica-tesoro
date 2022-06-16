@@ -1,10 +1,10 @@
 @font-face {
-    font-family: "BebasNeue";
+    font-family: "Bebas Neue";
     src: url('../font/BebasNeue-Regular.woff') format('woff'), url('../font/BebasNeue-Regular.ttf') format('truetype');
 }
 
 body {
-    font-family: "BebasNeue";
+    font-family: "Bebas Neue", "Arial";
 }
 
 .logo {
