@@ -8,6 +8,7 @@ $puntos = 0;
 //Crear una cookie para cada stand
 foreach ($stands as $nombre) {
     if (!isset($_COOKIE[$nombre])) {
+        //Definir cookie nombre del stand con duracion de 1 dia
         setcookie($nombre, 0, time() + 1 * 24 * 60 * 60);
     } else {
         if($_COOKIE[$nombre] == 1) {
@@ -21,6 +22,8 @@ if($puntos == count($stands)) {
     setcookie("ganador", 1, time() + 1 * 24 * 60 * 60);
     header("Location: ganador.php");
     exit();
+} else {
+    $faltantes = count($stands) - $puntos;
 }
 
 // Generamos un número aleatorio entre 0 y 4 para las 5 preguntas posibles
@@ -75,7 +78,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
             //Si la cookie del stand está definida en 1 o en 2 entonces mostrar mensaje de error
             if (isset($_COOKIE[$stands[$stand]]) && ($_COOKIE[$stands[$stand]] == 1 || $_COOKIE[$stands[$stand]] == 2)) {
                 echo "<p class='pregunta'>Ya visitaste este stand, busca otro!</p>";
-                echo "<p class='pregunta'>Te faltan ".count($stands)-$puntos." stands para ganar!</p>";
+                echo "<p class='pregunta'>Te faltan {$faltantes} stands para ganar!</p>";
             } else {
         ?>
         <?php
@@ -85,7 +88,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
             $respuesta = $_POST['respuesta'];
 
             //Se guarda la pregunta actual
-            $preguntact = $_POST['pregunta']; 
+            $preguntact = $_POST['pregunta'];
 
             //Si la respuesta es correcta
             if($respuesta == $respuestas[$stand][$preguntact]["correcta"]){ 
@@ -93,16 +96,19 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
                 echo "<p class='pregunta'>Correcto! Busca otro código QR para seguir jugando!</p>";
                 //Se cambia el valor de la cookie del stand a 1
                 setcookie($stands[$stand], 1, time() + 1 * 24 * 60 * 60);
-                echo "<p class='pregunta'>Te faltan ".count($stands)-($puntos+1)." stands para ganar!</p>";
+                $faltantes = count($stands) - ($puntos+1);
+                echo "<p class='pregunta'>Te faltan {$faltantes} stands para ganar!</p>";
                 if($puntos+1 == count($stands)) {
+                    //Se establece la cookie ganador para que no hagan trampa
                     setcookie("ganador", 1, time() + 1 * 24 * 60 * 60);
+                    //Se redirige a la página de ganador
                     header("Location: ganador.php");
                     exit();
                 }
             } else { // Si no es correcta
                 //Se muestra un mensaje de incorrecto
                 echo "<p class='pregunta'>Incorrecto! Vuelve a intentarlo dentro de 3 minutos!</p>"; 
-                echo "<p class='pregunta'>Te faltan ".count($stands)-$puntos." stands para ganar!</p>";
+                echo "<p class='pregunta'>Te faltan {$faltantes} stands para ganar!</p>";
                 //Se establece una cookie llamada fallo de duracion de 3 minutos con el valor de 1
                 setcookie("fallo{$stands[$stand]}", 1, time() + 3 * 60);
             }
@@ -111,7 +117,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
             //se termine la cookie
             if(isset($_COOKIE["fallo{$stands[$stand]}"])) {
                 echo "<p class='pregunta'>¡Fallaste al responder anteriormente.. Vuelve a intentarlo más tarde!</p>";
-                echo "<p class='pregunta'>Te faltan ".count($stands)-$puntos." stands para ganar!</p>";
+                echo "<p class='pregunta'>Te faltan {$faltantes} stands para ganar!</p>";
             } else {
         ?>
         <p class="pregunta" id="pregunta" <?php if(!isset($_COOKIE['tutorial'])) echo "style='display: none;'";?>>
