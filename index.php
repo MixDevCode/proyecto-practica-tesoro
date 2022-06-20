@@ -54,7 +54,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
             <hr>
         </div>
     </header>
-    <div  class="text-center margen" id="content-wrap">
+    <div class="text-center margen" id="content-wrap">
         <!-- Título del Juego --> 
         <h1 class="nombrejuego">Búsqueda del Tesoro</h1>
         <?php
@@ -79,6 +79,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
             if (isset($_COOKIE[$stands[$stand]]) && ($_COOKIE[$stands[$stand]] == 1 || $_COOKIE[$stands[$stand]] == 2)) {
                 echo "<p class='pregunta'>Ya visitaste este stand, busca otro!</p>";
                 echo "<p class='pregunta'>Te faltan {$faltantes} stands para ganar!</p>";
+                echo "<a href='https://mixdevcode.github.io/qr-reader/' class='btn btn-primary'>Escanear otro código QR usando la web</a>";
             } else {
         ?>
         <?php
@@ -91,13 +92,16 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
             $preguntact = $_POST['pregunta'];
 
             //Si la respuesta es correcta
-            if($respuesta == $respuestas[$stand][$preguntact]["correcta"]){ 
+            if($respuesta == $respuestas[$stand][$preguntact]["correcta"]){
+
+                // Se cambia el valor de faltantes solo para mostrar
+                $faltantes = count($stands) - ($puntos+1);
                 //Se muestra mensaje de correcto
                 echo "<p class='pregunta'>Correcto! Busca otro código QR para seguir jugando!</p>";
                 //Se cambia el valor de la cookie del stand a 1
                 setcookie($stands[$stand], 1, time() + 1 * 24 * 60 * 60);
-                $faltantes = count($stands) - ($puntos+1);
                 echo "<p class='pregunta'>Te faltan {$faltantes} stands para ganar!</p>";
+                echo "<a href='https://mixdevcode.github.io/qr-reader/' class='btn btn-primary'>Escanear otro código QR usando la web</a>";
                 if($puntos+1 == count($stands)) {
                     //Se establece la cookie ganador para que no hagan trampa
                     setcookie("ganador", 1, time() + 1 * 24 * 60 * 60);
@@ -118,6 +122,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
             if(isset($_COOKIE["fallo{$stands[$stand]}"])) {
                 echo "<p class='pregunta'>¡Fallaste al responder anteriormente.. Vuelve a intentarlo más tarde!</p>";
                 echo "<p class='pregunta'>Te faltan {$faltantes} stands para ganar!</p>";
+                echo "<a href='https://mixdevcode.github.io/qr-reader/' class='btn btn-primary'>Escanear otro código QR usando la web</a>";
             } else {
         ?>
         <p class="pregunta" id="pregunta" <?php if(!isset($_COOKIE['tutorial'])) echo "style='display: none;'";?>>
@@ -147,7 +152,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
         <div class="container pt-4">
             <section class="mb-4">
                 <!-- Sitio Web -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://ifdcarcano-crr.infd.edu.ar/sitio/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fa-solid fa-school" style="font-size: 40pt; color: darkgreen;"></i
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://ifdcarcano-crr.infd.edu.ar/sitio/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fa-solid fa-globe" style="font-size: 40pt; color: darkgreen;"></i
             ></a>
                 <!-- Facebook -->
                 <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/isfdcarcano" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f" style="font-size: 40pt; color: darkblue;"></i

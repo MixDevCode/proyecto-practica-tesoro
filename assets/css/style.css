@@ -36,7 +36,7 @@ body {
 }
 
 .stand {
-    font-size: 140pt;
+    font-size: 15vw;
     color: darkcyan;
 }
 
@@ -45,6 +45,10 @@ body {
 }
 
 button {
+    font-size: 50pt !important;
+}
+
+a {
     font-size: 50pt !important;
 }
 

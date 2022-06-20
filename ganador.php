@@ -33,7 +33,7 @@
         <div class="container pt-4">
             <section class="mb-4">
                 <!-- Sitio Web -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://ifdcarcano-crr.infd.edu.ar/sitio/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fa-solid fa-school" style="font-size: 40pt; color: darkgreen;"></i
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://ifdcarcano-crr.infd.edu.ar/sitio/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fa-solid fa-globe" style="font-size: 40pt; color: darkgreen;"></i
             ></a>
                 <!-- Facebook -->
                 <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/isfdcarcano" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f" style="font-size: 40pt; color: darkblue;"></i
