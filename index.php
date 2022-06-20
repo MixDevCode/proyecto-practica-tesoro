@@ -1,6 +1,6 @@
 <?php
 // Llamamos al archivo estructura.php que contiene las preguntas, respuestas y nombres de stands
-require("estructura.php");
+require("assets/db/estructura.php");
 
 // Creamos la variable puntos
 $puntos = 0;
