@@ -157,9 +157,9 @@ $respuestas = array(
             "correcta" => "Ninguna de las anteriores",
             "posibles" => array(
                 "Fiesta Nacional del Chamamé",
-                "Fiesta NAcional del Surubí",
+                "Fiesta Nacional del Surubí",
                 "Fiesta Nacional de la Naranja",
-                "Fiesta del Carnavaal de Frontera",
+                "Fiesta del Carnaval de Frontera",
                 "Ninguna de las anteriores"
             )
         ),
@@ -168,7 +168,7 @@ $respuestas = array(
             "posibles" => array(
                 "Campeonato de futbol local",
                 "Fiesta de la Sandía",
-                "Carreraas universitarias",
+                "Carreras universitarias",
                 "Pavimentación de calles",
                 "Ninguna de las anteriores"
             )
@@ -186,7 +186,7 @@ $respuestas = array(
         "¿Qué importancia tienen los carnavales para el turismo en Monte Caseros?" => array(
             "correcta" => "Mucha",
             "posibles" => array(
-                "Extrema (es el único turismo que hay)",
+                "Extrema",
                 "Mucha",
                 "Poca",
                 "Casi nada",
