@@ -1,4 +1,7 @@
 <?php
+// Se establece la zona horaria para que no tenga problemas con las fechas
+date_default_timezone_set('America/Argentina/Buenos_Aires');
+
 // Llamamos al archivo estructura.php que contiene las preguntas, respuestas y nombres de stands
 require("assets/db/estructura.php");
 
@@ -9,7 +12,7 @@ $puntos = 0;
 foreach ($stands as $nombre) {
     if (!isset($_COOKIE[$nombre])) {
         //Definir cookie nombre del stand con duracion de 1 dia
-        setcookie($nombre, 0, time() + 1 * 24 * 60 * 60);
+        setcookie($nombre, 0, time() + 1 * 6 * 60 * 60);
     } else {
         if($_COOKIE[$nombre] == 1) {
             $puntos += 1;
@@ -19,7 +22,7 @@ foreach ($stands as $nombre) {
 }
 // Si los puntos son igual a la cantidad de stands, entonces ganó
 if($puntos == count($stands)) {
-    setcookie("ganador", 1, time() + 1 * 24 * 60 * 60);
+    setcookie("ganador", 1, time() + 1 * 6 * 60 * 60);
     header("Location: ganador.php");
     exit();
 } else {
@@ -45,6 +48,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9604b60dc2.js" crossorigin="anonymous"></script>
+    <script src="assets/js/tiempoFalt.js"></script>
 </head>
 <body>
     <header>
@@ -62,7 +66,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
         if(!isset($_COOKIE['tutorial'])) {
             echo "<img class='img-fluid' src='assets/img/tutorial.jpeg' onclick='irAPregunta();' id='tutorial' />";
             // Establecer cookie tutorial para que no se muestre la imagen de nuevo, de duracion de 1 dia
-            setcookie("tutorial", 1, time() + 1 * 24 * 60 * 60);
+            setcookie("tutorial", 1, time() + 1 * 6 * 60 * 60);
         }
         ?>
         <?php
@@ -99,29 +103,28 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
                 //Se muestra mensaje de correcto
                 echo "<p class='pregunta'>Correcto! Busca otro código QR para seguir jugando!</p>";
                 //Se cambia el valor de la cookie del stand a 1
-                setcookie($stands[$stand], 1, time() + 1 * 24 * 60 * 60);
+                setcookie($stands[$stand], 1, time() + 1 * 6 * 60 * 60);
                 echo "<p class='pregunta'>Te faltan {$faltantes} stands para ganar!</p>";
                 echo "<a href='https://mixdevcode.github.io/qr-reader/' class='btn btn-primary'>Escanear otro código QR usando la web</a>";
                 if($puntos+1 == count($stands)) {
                     //Se establece la cookie ganador para que no hagan trampa
-                    setcookie("ganador", 1, time() + 1 * 24 * 60 * 60);
+                    setcookie("ganador", 1, time() + 1 * 6 * 60 * 60);
                     //Se redirige a la página de ganador
                     header("Location: ganador.php");
                     exit();
                 }
             } else { // Si no es correcta
-                //Se muestra un mensaje de incorrecto
-                echo "<p class='pregunta'>Incorrecto! Vuelve a intentarlo dentro de 3 minutos!</p>"; 
-                echo "<p class='pregunta'>Te faltan {$faltantes} stands para ganar!</p>";
-                //Se establece una cookie llamada fallo de duracion de 3 minutos con el valor de 1
-                setcookie("fallo{$stands[$stand]}", 1, time() + 3 * 60);
+                setcookie("fallo{$stands[$stand]}", Date(DATE_ATOM), time() + 1 * 60);
+                header("Refresh:0");
             }
         } else { //Si no se ha enviado una respuesta mostrar todo lo de abajo
             //Si la cookie fallo está definida, entonces mostrar error de volver a intentarlo en cuanto
             //se termine la cookie
             if(isset($_COOKIE["fallo{$stands[$stand]}"])) {
-                echo "<p class='pregunta'>¡Fallaste al responder anteriormente.. Vuelve a intentarlo más tarde!</p>";
+                echo "<p class='pregunta' id='tiemporestante'>¡Fallaste al responder la pregunta.. Vuelve a intentarlo dentro de <span id='tiempo'></span>!</p>";
                 echo "<p class='pregunta'>Te faltan {$faltantes} stands para ganar!</p>";
+                echo "<a class='btn btn-primary' id='botonreiniciar' style='display: none;' href='javascript:window.location.href=window.location.href'>Volver a intentarlo</a>";
+                echo "<p class='pregunta' id='decisionreiniciar' style='display: none;'>o</p>";
                 echo "<a href='https://mixdevcode.github.io/qr-reader/' class='btn btn-primary'>Escanear otro código QR usando la web</a>";
             } else {
         ?>
@@ -166,6 +169,22 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
             TECNICATURA SUPERIOR EN DESARROLLO DE SOFTWARE 2DO AÑO
         </div>
     </footer>
+    <?php if(isset($_COOKIE["fallo{$stands[$stand]}"])) { ?>
+        <script type="text/javascript">
+            function tiempo(){
+                document.getElementById('tiempo').innerHTML = tiempoFalt("<?php echo $_COOKIE["fallo{$stands[$stand]}"]; ?>");
+                if (tiempoFalt("<?php echo $_COOKIE["fallo{$stands[$stand]}"]; ?>") == "1 segundo") {
+                    clearInterval(t);
+                    setTimeout(() => {
+                        document.getElementById('tiemporestante').innerHTML = "¡Ya puedes volver a responder la pregunta, toca el botón o escanea el código QR nuevamente para volver a intentarlo!";
+                        document.getElementById('botonreiniciar').style.display = "block";
+                        document.getElementById('decisionreiniciar').style.display = "block";
+                    }, 1000);
+                }
+            };
+            var t = setInterval(tiempo, 1000);
+        </script>
+    <?php } ?>
     <script type="text/javascript">
         function irAPregunta() {
             const tutorial = document.getElementById('tutorial');
