@@ -8,6 +8,14 @@ require("assets/db/estructura.php");
 // Creamos la variable puntos
 $puntos = 0;
 
+// Revisamos si la get activar existe y es igual a true
+if(isset($_GET['activar']) && $_GET['activar'] == "no"){
+    $archivo = fopen("desactivado.txt", "w+b");    // Abrir el archivo, creándolo si no existe
+    fclose($archivo);
+} else if (isset($_GET['activar']) && $_GET['activar'] == "si") {
+    unlink("desactivado.txt");
+}
+
 //Crear una cookie para cada stand
 foreach ($stands as $nombre) {
     if (!isset($_COOKIE[$nombre])) {
@@ -61,7 +69,9 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
     <div class="text-center margen" id="content-wrap">
         <!-- Título del Juego --> 
         <h1 class="nombrejuego">Búsqueda del Tesoro</h1>
-        <?php
+        <?php if(file_exists("desactivado.txt")){
+            echo "<h2 class='stand'>En unos minutos comenzamos</h2>";
+        } else {
         // Si la cookie tutorial está definida no mostrar imagen, si no, mostrar imagen
         if(!isset($_COOKIE['tutorial'])) {
             echo "<img class='img-fluid' src='assets/img/tutorial.jpeg' onclick='irAPregunta();' id='tutorial' />";
@@ -149,6 +159,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
         } //Fin del if de si ya se ha respondido el stand
         } //Fin del if de si se ha enviado una respuesta
         } //Fin del if de si se ha elegido un stand
+        } //Fin del if de si existe el archivo desactivado
         ?>
     </div>
     <footer class="text-center text-white" id="footer" style="background-color: #f1f1f1;">
