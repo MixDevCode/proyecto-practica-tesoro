@@ -8,8 +8,8 @@ $stands = array(
 
 $preguntas = array(
     "SF1" => array(
-        "¿Qué aplicación web se usó para diseñar las imáges de este juego?",
-        "Lenguaje que se usa para disñar páginas web",
+        "¿Qué aplicación web se usó para diseñar las imágenes de este juego?",
+        "Lenguaje que se usó para disñar páginas web",
         "¿Cuál es la función principal de un código QR?",
         "¿Cuántos años dura la carrera en desarrollo de software?",
         "¿Qué tipo de programas se pueden crear programado?"
@@ -22,9 +22,9 @@ $preguntas = array(
         "¿Cuál de estas opciones es un Sistema Operativo?"
     ) ,
     "TRSM072" => array(
-        "¿Que atractivos turísticos de Monte Caseros viste en el stand de turismo?",
-        "¿Que importante atractivo de la provincia de Misiones se encuentra en el Mapa Argentino?",
-        "¿Que actividad realizaste en el Stand de Turismo?",
+        "¿Qué atractivos turísticos de Monte Caseros viste en el stand de turismo?",
+        "¿Qué importante atractivo de la provincia de Misiones se encuentra en el Mapa Argentino?",
+        "¿Qué actividad realizaste en el Stand de Turismo?",
         "¿Entre que calles se encuentra la Plaza Colon? ",
         "¿Cuántas provincias hay en el mapa de Argentina?"
     ),
@@ -32,7 +32,7 @@ $preguntas = array(
         "¿Qué industria es la segunda más contaminante en el mundo?",
         "¿Cuántos litros de agua se ocupan para la confección de un jean?",
         "¿En dónde se encuentra un gran basural de ropa?",
-        "¿Qué rio de Buenos Aires se encuentra contaminado por la industria textil, entre otros?",
+        "¿Qué río de Buenos Aires se encuentra contaminado por la industria textil, entre otros?",
         "¿Cómo podemos cuidar el medio ambiente en la industria textil?"
     )
 );
@@ -49,7 +49,7 @@ $respuestas = array(
                 "Facebook"
             )
         ),
-        "Lenguaje que se usa para diseñar páginas web" => array(
+        "Lenguaje que se usó para diseñar páginas web" => array(
             "correcta" => "HTML",
             "posibles" => array(
                 "JVL",
@@ -173,7 +173,7 @@ $respuestas = array(
                 "Córdoba"
             )
         ),
-        "¿Qué rio de Buenos Aires se encuentra contaminado por la industria textil, entre otros?" => array(
+        "¿Qué río de Buenos Aires se encuentra contaminado por la industria textil, entre otros?" => array(
             "correcta" => "Riachuelo",
             "posibles" => array(
                 "Riachuelo",
@@ -195,17 +195,17 @@ $respuestas = array(
         ),
     ),
     "TRSM072" => array(
-        "¿Que atractivos turísticos de Monte Caseros viste en el stand de turismo?" => array(
+        "¿Qué atractivos turísticos de Monte Caseros viste en el stand de turismo?" => array(
             "correcta" => "Monumento a las lavanderas ",
             "posibles" => array(
                 "Club progreso",
-                "Monumento a las lavanderas ",
+                "Monumento a las lavanderas",
                 "Club Barrio Florida",
                 "Mesa del indio",
                 "Arco de entrada"
             )
         ),
-        "¿Que importante atractivo de la provincia de Misiones se encuentra en el Mapa Argentino?" => array(
+        "¿Qué importante atractivo de la provincia de Misiones se encuentra en el Mapa Argentino?" => array(
             "correcta" => "Cataratas de Iguazú ",
             "posibles" => array(
                 "Puna de Atacama",
@@ -215,7 +215,7 @@ $respuestas = array(
                 "Esteros de Iberá"
             )
         ),
-        "¿Que actividad realizaste en el Stand de Turismo?" => array(
+        "¿Qué actividad realizaste en el Stand de Turismo?" => array(
             "correcta" => "Rompecabezas ",
             "posibles" => array(
                 "Rompecabezas",
@@ -225,7 +225,7 @@ $respuestas = array(
                 "Autodefinido"
             )
         ),
-        "¿Entre que calles se encuentra la Plaza Colon? " => array(
+        "¿Entre qué calles se encuentra la Plaza Colon? " => array(
             "correcta" => "Rivadavia, Vicente Mendoza, Bergamini y Colón ",
             "posibles" => array(
                 "Alvear, Cristobal Colón, Pelegrini, Bergamini",
