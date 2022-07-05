@@ -8,241 +8,241 @@ $stands = array(
 
 $preguntas = array(
     "SF1" => array(
-        "Formato de imagen",
-        "Formato de página web",
-        "¿Qué significa la sigla S.O.?",
-        "¿Qué es internet?",
-        "¿Qué es YouTube?"
+        "¿Qué aplicación web se usó para diseñar las imáges de este juego?",
+        "Lenguaje que se usa para disñar páginas web",
+        "¿Cuál es la función principal de un código QR?",
+        "¿Cuántos años dura la carrera en desarrollo de software?",
+        "¿Qué tipo de programas se pueden crear programado?"
     ) ,
     "INF07" => array(
-        "¿Qué es el Hardware?",
-        "¿Qué es lo más esencial de una computadora?",
-        "¿Qué es un CPU?",
-        "¿Qué es un monitor?",
-        "¿Quién arregla una computadora?"
+        "¿De qué se trata la Tecnicatura Superior en Infraestructura Informática?",
+        "¿¿Cómo está compuesta una PC?",
+        "¿Qué es una placa madre?",
+        "¿Cuáles de estas opciones son periféricos de entrada?",
+        "¿Cuál de estas opciones es un Sistema Operativo?"
     ) ,
     "TRSM072" => array(
-        "¿Cuántas comparsas hay en Monte Caseros?",
-        "¿Cuál de estas fiestas correntinas existen en Monte Caseros?",
-        "¿Cuál de los siguientes eventos/acciones tiene relación con el turismo?",
-        "Mínimamente, ¿qué lenguajes debe manejar un trabajador en turismo en Monte Caseros?",
-        "¿Qué importancia tienen los carnavales para el turismo en Monte Caseros?"
+        "¿Que atractivos turísticos de Monte Caseros viste en el stand de turismo?",
+        "¿Que importante atractivo de la provincia de Misiones se encuentra en el Mapa Argentino?",
+        "¿Que actividad realizaste en el Stand de Turismo?",
+        "¿Entre que calles se encuentra la Plaza Colon? ",
+        "¿Cuántas provincias hay en el mapa de Argentina?"
     ),
     "TXL0509" => array(
-        "¿Cuántas fábricas textiles existen en Monte Caseros?",
-        "¿Cuál de estos productos comenzó a fabricar la Fábrica Textil en Monte Caseros por la pandemia?",
-        "¿Qué fibras se usan en la industria textil?",
-        "¿De qué ser vivo se extrae el algodón?",
-        "¿De qué ser vivo de extrae la lana?"
+        "¿Qué industria es la segunda más contaminante en el mundo?",
+        "¿Cuántos litros de agua se ocupan para la confección de un jean?",
+        "¿En dónde se encuentra un gran basural de ropa?",
+        "¿Qué rio de Buenos Aires se encuentra contaminado por la industria textil, entre otros?",
+        "¿Cómo podemos cuidar el medio ambiente en la industria textil?"
     )
 );
 
 $respuestas = array(
     "SF1" => array(
-        "Formato de imagen" => array(
-            "correcta" => "jpg",
+        "¿Qué aplicación web se usó para diseñar las imágenes de este juego?" => array(
+            "correcta" => "Canva",
             "posibles" => array(
-                "http",
-                "php",
-                "jgp",
-                "peg",
-                "jpg"
+                "Canva",
+                "Paint",
+                "Word",
+                "Excel",
+                "Facebook"
             )
         ),
-        "Formato de página web" => array(
-            "correcta" => "html",
+        "Lenguaje que se usa para diseñar páginas web" => array(
+            "correcta" => "HTML",
             "posibles" => array(
-                "jpg",
-                "MIDI",
-                "http",
-                "python",
-                "html"
+                "JVL",
+                "HTML",
+                "RCA",
+                "Inglés",
+                "Italiano"
             )
         ),
-        "¿Qué significa la sigla S.O.?" => array(
-            "correcta" => "Sistema Operativo",
+        "¿Cuál es la función principal de un código QR?" => array(
+            "correcta" => "Guardar información digital en una imagen que puede ser escaneada con una cámara.",
             "posibles" => array(
-                "Sincronización Óptima",
-                "Sistema Operativo",
-                "Standard Operation",
-                "Sostén de Objeto",
-                "Sintaxis.org"
+                "Guardar información digital en una imagen que puede ser escaneada con una cámara.",}
+                "Para pagar una deuda.",
+                "Para comprar en línea.",
+                "Para mejorar la velocidad de la computadora.",
+                "Para cargar la batería del celular."
             )
         ),
-        "¿Qué es internet?" => array(
-            "correcta" => "Una red mundial",
+        "¿Cuántos años dura la carrera en desarrollo de software?" => array(
+            "correcta" => "3 años",
             "posibles" => array(
-                "Una red mundial",
-                "Es la Web",
-                "WiFi",
-                "Una red hogar",
-                "Es un programa"
+                "1 año",
+                "2 años",
+                "3 años",
+                "5 años",
+                "10 años"
             )
         ),
-        "¿Qué es YouTube?" => array(
-            "correcta" => "Una página web de videos",
+        "¿Qué tipo de programas se pueden crear programado?" => array(
+            "correcta" => "Todas las anteriores",
             "posibles" => array(
-                "Una página web de videos",
-                "Una red social",
-                "Un videojuego",
-                "Una canción",
-                "Una foto"
+                "Aplicaciones para Computadora",
+                "Apps para Celulares",
+                "Juegos",
+                "Aplicaciones Web",
+                "Todas las anteriores"
             )
         )
     ),
     "INF07" => array(
-        "¿Qué es el Hardware?" => array(
-            "correcta" => "Todo lo que se toca de una computadora",
+        "¿De qué se trata la Tecnicatura Superior en Infraestructura Informática?" => array(
+            "correcta" => "Se trata de mantener, actualizar, analizar y resolver problemas derivados de la operación de productos tecnológicos.",
             "posibles" => array(
-                "Un programa",
-                "Todo lo que se toca de una computadora",
-                "Un teclado",
-                "La persona que trabaja con la PC",
-                "Un procesador"
+                "Se trata de asesoramiento de organización, constitución y administración de empresas de viaje.",
+                "Se trata de programar, usar metodologías, desarrollo, animación 3D, mantenimiento y Desarrollo de Redes.",
+                "Se trata de mantener, actualizar, analizar y resolver problemas derivados de la operación de productos tecnológicos.",
+                "Desarrollar tareas de apoyo y asistencia técnica, supervisión de operaciones y procesos, gestión y control de la producción en las distintas áreas de la industria textil.",
+                "Todas son correctas"
             )
         ),
-        "¿Qué es lo más esencial de una computadora?" => array(
-            "correcta" => "RAM",
+        "¿Cómo está compuesta una PC?" => array(
+            "correcta" => "Software y Hardware",
             "posibles" => array(
-                "Disco duro",
-                "Google",
-                "Memoria Caché",
-                "Bios",
-                "RAM"
+                "Programas informáticos.",
+                "Solo por el Software.",
+                "Solo por el Hardware",
+                "Software y Hardware",
+                "Todas son incorrectas"
             )
         ),
-        "¿Qué es un CPU?" => array(
-            "correcta" => "Procesador",
+        "¿Qué es una placa madre?" => array(
+            "correcta" => "Es la tarjeta de circuito integrado principal del sistema informático, a la que se acoplan los demás componentes que constituyen el computador.",
             "posibles" => array(
-                "Un escritorio",
-                "Una caja",
-                "Procesador",
-                "Una ONG",
-                "Una herramienta"
+                "Es la tarjeta de circuito integrado principal del sistema informático, a la que se acoplan los demás componentes que constituyen el computador.",
+                "Es el cerebro de la computadora",
+                "Es un componente de hardware o software que guarda datos para que las solicitudes futuras de esos datos se puedan atender con mayor rapidez",
+                " Proporciona una de las principales funciones de la computación moderna: el almacenamiento de información y conocimiento. ",
+                "Todas son incorrectas"
             )
         ),
-        "¿Qué es un monitor?" => array(
-            "correcta" => "Una pantalla",
+        "¿Cuáles de estas opciones son periféricos de entrada?" => array(
+            "correcta" => "Todas las opciones son correctas",
             "posibles" => array(
-                "Una pantalla",
-                "Una televisión",
-                "Una computadora",
-                "Un programa",
-                "Un parlante"
+                "Mouse",
+                "Scanner",
+                "Micrófono",
+                "Teclado",
+                "Todas las opciones son correctas"
             )
         ),
-        "¿Quién arregla una computadora?" => array(
-            "correcta" => "Un técnico",
+        "¿Cuál de estas opciones es un Sistema Operativo?" => array(
+            "correcta" => "Windows",
             "posibles" => array(
-                "Un electriciista",
-                "Un técnico",
-                "Un YouTuber",
-                "Un programador",
-                "Una maestra"
-            )
-        ),
-    ),
-    "TRSM072" => array(
-        "¿Cuántas comparsas hay en Monte Caseros?" => array(
-            "correcta" => "7",
-            "posibles" => array(
-                "1",
-                "3",
-                "4",
-                "7",
-                "8"
-            )
-        ),
-        "¿Cuál de estas fiestas correntinas existen en Monte Caseros?" => array(
-            "correcta" => "Ninguna de las anteriores",
-            "posibles" => array(
-                "Fiesta Nacional del Chamamé",
-                "Fiesta Nacional del Surubí",
-                "Fiesta Nacional de la Naranja",
-                "Fiesta del Carnaval de Frontera",
-                "Ninguna de las anteriores"
-            )
-        ),
-        "¿Cuál de los siguientes eventos/acciones tiene relación con el turismo?" => array(
-            "correcta" => "Fiesta de la Sandía",
-            "posibles" => array(
-                "Campeonato de futbol local",
-                "Fiesta de la Sandía",
-                "Carreras universitarias",
-                "Pavimentación de calles",
-                "Ninguna de las anteriores"
-            )
-        ),
-        "Mínimamente, ¿qué lenguajes debe manejar un trabajador en turismo en Monte Caseros?" => array(
-            "correcta" => "Inglés, Portugués, Español",
-            "posibles" => array(
-                "Inglés, Español, Guaraní",
-                "Argentino, Inglés, Alemán",
-                "Inglés, Portugués, Español",
-                "Brasilero, Ingés, Chino",
-                "Uruguayo, Brasilero, Inglés"
-            )
-        ),
-        "¿Qué importancia tienen los carnavales para el turismo en Monte Caseros?" => array(
-            "correcta" => "Mucha",
-            "posibles" => array(
-                "Extrema",
-                "Mucha",
-                "Poca",
-                "Casi nada",
-                "Nada"
+                "Power Point",
+                "Word",
+                "Office",
+                "Windows",
+                "Firefox"
             )
         ),
     ),
     "TXL0509" => array(
-        "¿Cuántas fábricas textiles existen en Monte Caseros?" => array(
-            "correcta" => "1",
+        "¿Qué industria es la segunda más contaminante en el mundo?" => array(
+            "correcta" => "La industria textil",
             "posibles" => array(
-                "1",
-                "3",
-                "4",
-                "Nunca existió ninguna",
-                "Existía una, pero cerró"
+                "La industria textil",
+                "La industria petrolera",
+                "La industria automovilística",
+                "La industria de la música ",
+                "La industria eléctrica "
             )
         ),
-        "¿Cuál de estos productos comenzó a fabricar la Fábrica Textil en Monte Caseros por la pandemia?" => array(
-            "correcta" => "Barbijos",
+        "¿Cuántos litros de agua se ocupan para la confección de un jean?" => array(
+            "correcta" => "7500",
             "posibles" => array(
-                "Zapatillas John Foos",
-                "Productos Adidas",
-                "Todo tipo de ropa",
-                "Barbijos",
-                "Ninguna de las anteriores"
+                "20.000",
+                "15.000",
+                "1.000",
+                "7.500",
+                "No se ocupa agua"
             )
         ),
-        "¿Qué fibras se usan en la industria textil?" => array(
-            "correcta" => "Fibras naturales, artificiales y sintéticas",
+        "¿En dónde se encuentra un gran basural de ropa?" => array(
+            "correcta" => "Desierto de atacama",
             "posibles" => array(
-                "Fibras naturales",
-                "Fibras naturales y artificiales",
-                "Fibras naturales, artificiales y sintéticas",
-                "Fibras de hilo, lana y algodón",
-                "Ellos no usan fibras, las producen"
+                "Desierto patagónico",
+                "Mendoza ",
+                "Desierto de atacama",
+                "Buenos Aires",
+                "Córdoba"
             )
         ),
-        "¿De qué ser vivo se extrae el algodón?" => array(
-            "correcta" => "Planta de algodón",
+        "¿Qué rio de Buenos Aires se encuentra contaminado por la industria textil, entre otros?" => array(
+            "correcta" => "Riachuelo",
             "posibles" => array(
-                "Oveja",
-                "Perros Caniche",
-                "Dientes de león",
-                "Planta de algodón",
-                "No se extrae de ningún animal o planta"
+                "Riachuelo",
+                "Río cuarto",
+                "Río Uruguay",
+                "Río Paraná ",
+                "Río de La Plata"
             )
         ),
-        "¿De qué ser vivo de extrae la lana?" => array(
-            "correcta" => "Oveja",
+        "¿Cómo podemos cuidar el medio ambiente en la industria textil?" => array(
+            "correcta" => "Reciclando ropa",
             "posibles" => array(
-                "Perros Caniche",
-                "Oveja",
-                "Abeja",
-                "Oso polar",
-                "Planta de algodón"
+                "Comprando mucha ropa",
+                "Reciclando ropa",
+                "Guardando ropa sin usar",
+                "Tirando ropa en desuso ",
+                "Quemando la ropa"
+            )
+        ),
+    ),
+    "TRSM072" => array(
+        "¿Que atractivos turísticos de Monte Caseros viste en el stand de turismo?" => array(
+            "correcta" => "Monumento a las lavanderas ",
+            "posibles" => array(
+                "Club progreso",
+                "Monumento a las lavanderas ",
+                "Club Barrio Florida",
+                "Mesa del indio",
+                "Arco de entrada"
+            )
+        ),
+        "¿Que importante atractivo de la provincia de Misiones se encuentra en el Mapa Argentino?" => array(
+            "correcta" => "Cataratas de Iguazú ",
+            "posibles" => array(
+                "Puna de Atacama",
+                "Cataratas de Iguazú ",
+                "Esteros del Ibera ",
+                "Lago Nahuel Huapi",
+                "Esteros de Iberá"
+            )
+        ),
+        "¿Que actividad realizaste en el Stand de Turismo?" => array(
+            "correcta" => "Rompecabezas ",
+            "posibles" => array(
+                "Rompecabezas",
+                "Ruleta",
+                "Preguntados ",
+                "Pasapalabras",
+                "Autodefinido"
+            )
+        ),
+        "¿Entre que calles se encuentra la Plaza Colon? " => array(
+            "correcta" => "Rivadavia, Vicente Mendoza, Bergamini y Colón ",
+            "posibles" => array(
+                "Alvear, Cristobal Colón, Pelegrini, Bergamini",
+                "Eva Duarte de Peron y Pellegrini",
+                "Colon, Tucumán, Salta y Juan Pujol ",
+                "Rivadavia, Vicente Mendoza, Bergamini y Colón ",
+                "Corrientes, Buenos Aires y Colón"
+            )
+        ),
+        "¿Cuántas provincias hay en el mapa de Argentina?" => array(
+            "correcta" => "23",
+            "posibles" => array(
+                "13",
+                "20",
+                "23",
+                "19",
+                "26"
             )
         )
     )
