@@ -25,7 +25,8 @@
             echo "<h2 class='stand'>No se vale hacer trampa!</h2>";
         } else { // Si está definida
             //Mostrar mensaje de ganador
-            echo '<img class="img-fluid" src="assets/img/ganador.jpeg" />';
+            echo '<img class="img-fluid" src="assets/img/ganador.jpeg" /><br>';
+            echo '<p style="font-size: 50pt;">'.$_COOKIE["ganador"].'</p>';
         }
         ?>
     </div>

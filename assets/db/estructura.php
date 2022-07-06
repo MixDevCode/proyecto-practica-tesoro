@@ -9,14 +9,14 @@ $stands = array(
 $preguntas = array(
     "SF1" => array(
         "¿Qué aplicación web se usó para diseñar las imágenes de este juego?",
-        "Lenguaje que se usó para disñar páginas web",
+        "Lenguaje que se usó para diseñar páginas web",
         "¿Cuál es la función principal de un código QR?",
         "¿Cuántos años dura la carrera en desarrollo de software?",
         "¿Qué tipo de programas se pueden crear programado?"
     ) ,
     "INF07" => array(
         "¿De qué se trata la Tecnicatura Superior en Infraestructura Informática?",
-        "¿¿Cómo está compuesta una PC?",
+        "¿Cómo está compuesta una PC?",
         "¿Qué es una placa madre?",
         "¿Cuáles de estas opciones son periféricos de entrada?",
         "¿Cuál de estas opciones es un Sistema Operativo?"
@@ -25,7 +25,7 @@ $preguntas = array(
         "¿Qué atractivos turísticos de Monte Caseros viste en el stand de turismo?",
         "¿Qué importante atractivo de la provincia de Misiones se encuentra en el Mapa Argentino?",
         "¿Qué actividad realizaste en el Stand de Turismo?",
-        "¿Entre que calles se encuentra la Plaza Colon? ",
+        "¿Entre qué calles se encuentra la Plaza Colon?",
         "¿Cuántas provincias hay en el mapa de Argentina?"
     ),
     "TXL0509" => array(
@@ -62,11 +62,11 @@ $respuestas = array(
         "¿Cuál es la función principal de un código QR?" => array(
             "correcta" => "Guardar información digital en una imagen que puede ser escaneada con una cámara.",
             "posibles" => array(
-                "Guardar información digital en una imagen que puede ser escaneada con una cámara.",}
-                "Para pagar una deuda.",
-                "Para comprar en línea.",
-                "Para mejorar la velocidad de la computadora.",
-                "Para cargar la batería del celular."
+                "Guardar información digital en una imagen que puede ser escaneada con una cámara.",
+                "Pagar una deuda.",
+                "Comprar en línea.",
+                "Mejorar la velocidad de la computadora.",
+                "Cargar la batería del celular."
             )
         ),
         "¿Cuántos años dura la carrera en desarrollo de software?" => array(
@@ -117,7 +117,7 @@ $respuestas = array(
                 "Es la tarjeta de circuito integrado principal del sistema informático, a la que se acoplan los demás componentes que constituyen el computador.",
                 "Es el cerebro de la computadora",
                 "Es un componente de hardware o software que guarda datos para que las solicitudes futuras de esos datos se puedan atender con mayor rapidez",
-                " Proporciona una de las principales funciones de la computación moderna: el almacenamiento de información y conocimiento. ",
+                "Proporciona una de las principales funciones de la computación moderna: el almacenamiento de información y conocimiento.",
                 "Todas son incorrectas"
             )
         ),
@@ -134,7 +134,7 @@ $respuestas = array(
         "¿Cuál de estas opciones es un Sistema Operativo?" => array(
             "correcta" => "Windows",
             "posibles" => array(
-                "Power Point",
+                "PowerPoint",
                 "Word",
                 "Office",
                 "Windows",
@@ -149,8 +149,8 @@ $respuestas = array(
                 "La industria textil",
                 "La industria petrolera",
                 "La industria automovilística",
-                "La industria de la música ",
-                "La industria eléctrica "
+                "La industria de la música",
+                "La industria eléctrica"
             )
         ),
         "¿Cuántos litros de agua se ocupan para la confección de un jean?" => array(
@@ -164,11 +164,11 @@ $respuestas = array(
             )
         ),
         "¿En dónde se encuentra un gran basural de ropa?" => array(
-            "correcta" => "Desierto de atacama",
+            "correcta" => "Desierto de Atacama",
             "posibles" => array(
-                "Desierto patagónico",
-                "Mendoza ",
-                "Desierto de atacama",
+                "Desierto Patagónico",
+                "Mendoza",
+                "Desierto de Atacama",
                 "Buenos Aires",
                 "Córdoba"
             )
@@ -177,9 +177,9 @@ $respuestas = array(
             "correcta" => "Riachuelo",
             "posibles" => array(
                 "Riachuelo",
-                "Río cuarto",
+                "Río Cuarto",
                 "Río Uruguay",
-                "Río Paraná ",
+                "Río Paraná",
                 "Río de La Plata"
             )
         ),
@@ -196,27 +196,27 @@ $respuestas = array(
     ),
     "TRSM072" => array(
         "¿Qué atractivos turísticos de Monte Caseros viste en el stand de turismo?" => array(
-            "correcta" => "Monumento a las lavanderas ",
+            "correcta" => "Monumento a las Lavanderas",
             "posibles" => array(
-                "Club progreso",
-                "Monumento a las lavanderas",
+                "Club Progreso",
+                "Monumento a las Lavanderas",
                 "Club Barrio Florida",
                 "Mesa del indio",
-                "Arco de entrada"
+                "Arco de Entrada"
             )
         ),
         "¿Qué importante atractivo de la provincia de Misiones se encuentra en el Mapa Argentino?" => array(
-            "correcta" => "Cataratas de Iguazú ",
+            "correcta" => "Cataratas de Iguazú",
             "posibles" => array(
                 "Puna de Atacama",
-                "Cataratas de Iguazú ",
-                "Esteros del Ibera ",
+                "Cataratas de Iguazú",
+                "Esteros del Ibera",
                 "Lago Nahuel Huapi",
                 "Esteros de Iberá"
             )
         ),
         "¿Qué actividad realizaste en el Stand de Turismo?" => array(
-            "correcta" => "Rompecabezas ",
+            "correcta" => "Rompecabezas",
             "posibles" => array(
                 "Rompecabezas",
                 "Ruleta",
@@ -226,12 +226,12 @@ $respuestas = array(
             )
         ),
         "¿Entre qué calles se encuentra la Plaza Colon? " => array(
-            "correcta" => "Rivadavia, Vicente Mendoza, Bergamini y Colón ",
+            "correcta" => "Rivadavia, Vicente Mendoza, Bergamini y Colón",
             "posibles" => array(
                 "Alvear, Cristobal Colón, Pelegrini, Bergamini",
                 "Eva Duarte de Peron y Pellegrini",
-                "Colon, Tucumán, Salta y Juan Pujol ",
-                "Rivadavia, Vicente Mendoza, Bergamini y Colón ",
+                "Colon, Tucumán, Salta y Juan Pujol",
+                "Rivadavia, Vicente Mendoza, Bergamini y Colón",
                 "Corrientes, Buenos Aires y Colón"
             )
         ),

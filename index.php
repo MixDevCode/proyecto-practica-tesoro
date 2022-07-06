@@ -5,6 +5,9 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 // Llamamos al archivo estructura.php que contiene las preguntas, respuestas y nombres de stands
 require("assets/db/estructura.php");
 
+// Archivo generador de usuario
+require("randomStr.php");
+
 // Creamos la variable puntos
 $puntos = 0;
 
@@ -28,13 +31,19 @@ foreach ($stands as $nombre) {
         }
     }
 }
-// Si los puntos son igual a la cantidad de stands, entonces ganó
-if($puntos == count($stands)) {
-    setcookie("ganador", 1, time() + 1 * 6 * 60 * 60);
+
+// Si la cookie ganador ya está definida, redireccionar a la página de ganador
+if(isset($_COOKIE['ganador'])){
     header("Location: ganador.php");
-    exit();
 } else {
-    $faltantes = count($stands) - $puntos;
+    // Si los puntos son igual a la cantidad de stands, entonces ganó
+    if($puntos == count($stands)) {
+        setcookie("ganador", generarUsuario(), time() + 1 * 6 * 60 * 60);
+        header("Location: ganador.php");
+        exit();
+    } else {
+        $faltantes = count($stands) - $puntos;
+    }
 }
 
 // Generamos un número aleatorio entre 0 y 4 para las 5 preguntas posibles
@@ -118,7 +127,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
                 echo "<a href='https://mixdevcode.github.io/qr-reader/' class='btn btn-primary'>Escanear otro código QR usando la web</a>";
                 if($puntos+1 == count($stands)) {
                     //Se establece la cookie ganador para que no hagan trampa
-                    setcookie("ganador", 1, time() + 1 * 6 * 60 * 60);
+                    setcookie("ganador", generarUsuario(), time() + 1 * 6 * 60 * 60);
                     //Se redirige a la página de ganador
                     header("Location: ganador.php");
                     exit();
