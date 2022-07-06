@@ -146,15 +146,15 @@ $respuestas = array(
         "¿Qué industria es la segunda más contaminante en el mundo?" => array(
             "correcta" => "La industria textil",
             "posibles" => array(
-                "La industria textil",
-                "La industria petrolera",
                 "La industria automovilística",
+                "La industria petrolera",
+                "La industria textil",
                 "La industria de la música",
                 "La industria eléctrica"
             )
         ),
         "¿Cuántos litros de agua se ocupan para la confección de un jean?" => array(
-            "correcta" => "7500",
+            "correcta" => "7.500",
             "posibles" => array(
                 "20.000",
                 "15.000",

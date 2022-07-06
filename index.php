@@ -133,7 +133,7 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
                     exit();
                 }
             } else { // Si no es correcta
-                setcookie("fallo{$stands[$stand]}", Date(DATE_ATOM), time() + 1 * 60);
+                setcookie("fallo{$stands[$stand]}", Date(DATE_ATOM), time() + 5 * 60);
                 header("Refresh:0");
             }
         } else { //Si no se ha enviado una respuesta mostrar todo lo de abajo
@@ -156,10 +156,24 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
                 <input type="hidden" name="pregunta" value="<?php echo $pregunta ?>" />
                 <?php 
                 //Para cada respuesta posible
-                foreach ($respuestas[$stand][$pregunta]["posibles"] as $respuesta) {
-                    //Crear un botón mostrando las respuestas posibles
-                    echo "<button class='btn btn-outline-secondary' type='submit' name='respuesta' value='{$respuesta}'>{$respuesta}</button><br><br>";
-                } 
+                $array_al = array();
+                $i = 0;
+                while($i < 5){
+                    // Se muestran las respuestas en un orden aleatorio usando rand y guardando las que ya aparecieron en un array
+                    $numero = rand(0, count($respuestas[$stand][$pregunta]["posibles"])-1);
+                    if(!in_array($numero, $array_al)) {
+                        //Si no existe en el arreglo, insertarlo en el array
+                        array_push($array_al, $numero);
+                        $respuesta = $respuestas[$stand][$pregunta]["posibles"][$numero];
+                        //Se muestra la respuesta
+                        echo "<button class='btn btn-outline-secondary' type='submit' name='respuesta' value='{$respuesta}'>{$respuesta}</button><br><br>";
+                        $i++;
+                    }
+                }
+                // foreach ($respuestas[$stand][$pregunta]["posibles"] as $respuesta) {
+                //     //Crear un botón mostrando las respuestas posibles
+                //     echo "<button class='btn btn-outline-secondary' type='submit' name='respuesta' value='{$respuesta}'>{$respuesta}</button><br><br>";
+                // } 
                 ?>
             </div>
         </form>
@@ -192,8 +206,9 @@ if(isset($_GET['stand']) && !($_GET['stand'] == "")) { //Si se ha elegido un sta
     <?php if(isset($_COOKIE["fallo{$stands[$stand]}"])) { ?>
         <script type="text/javascript">
             function tiempo(){
-                document.getElementById('tiempo').innerHTML = tiempoFalt("<?php echo $_COOKIE["fallo{$stands[$stand]}"]; ?>");
-                if (tiempoFalt("<?php echo $_COOKIE["fallo{$stands[$stand]}"]; ?>") == "1 segundo") {
+				let tiempofaltante = tiempoFalt("<?php echo $_COOKIE["fallo{$stands[$stand]}"]; ?>");
+                document.getElementById('tiempo').innerHTML = tiempofaltante;
+                if (tiempofaltante == " 1 segundo" || tiempofaltante.includes("-")) {
                     clearInterval(t);
                     setTimeout(() => {
                         document.getElementById('tiemporestante').innerHTML = "¡Ya puedes volver a responder la pregunta, toca el botón o escanea el código QR nuevamente para volver a intentarlo!";
